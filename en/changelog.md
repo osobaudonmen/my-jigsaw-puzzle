@@ -1,0 +1,31 @@
+---
+layout: default
+title: Changelog
+lang: en
+---
+
+## Changelog
+
+### 0.25
+
+- Fixed an issue where dragging while zoomed in left ghost images in the background.
+- Fixed an issue where parts of the background disappeared when zooming out.
+- Improved the lag that occurred right after snapping pieces together.
+- Overall improvements to background display stability.
+
+### 0.24
+
+- All photos can now be deleted from the settings panel.
+- Reorganized the settings panel layout in the game screen.
+- Improved readability and progress display on the puzzle list screen.
+- Updated the overall app design with a new visual style.
+
+### 0.23
+
+- Improved the layout and navigation in the game screen.
+- Added a game reset feature.
+- Improved the display of license information.
+
+---
+
+[日本語](../changelog.html)
