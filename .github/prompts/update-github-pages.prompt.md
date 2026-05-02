@@ -22,6 +22,7 @@ description: My Jigsaw Puzzle の GitHub Pages 紹介サイトを更新し、公
 ### ステップ1: 事前確認
 1. `./img` の存在確認を行う。
 2. 既存ページの構成（`index.html`, `usage.md`, `function.md`, `settings.md`, `changelog.md`, `privacy_policy.html`, `wishlist_bugs.md`）を確認する。
+3. `en/` ディレクトリ配下の英語ページ（`en/index.html`, `en/usage.md`, `en/function.md`, `en/settings.md`, `en/changelog.md`, `en/wishlist_bugs.md`）が存在するか確認する。
 ### ステップ2: 更新内容の抽出
 1. `../jigsaw/` の直近の変更点から、ユーザーが認識できる内容のみを抽出する。
 2. 開発者向け内部実装、ビルド設定、CI、署名、リファクタリングのみの変更は `changelog.md` に記載しない。
@@ -35,7 +36,13 @@ description: My Jigsaw Puzzle の GitHub Pages 紹介サイトを更新し、公
    - `function.md`: 「何ができるか」をユーザーが体感できる言葉で伝える機能紹介
    - `settings.md`: 各設定を変えると何が変わるかを直感的に説明
    - `changelog.md`: ユーザーが実際に気づく変化だけを平易な言葉で記載
-6. 各ページの内容は日本語と英語の両方で記述する（各セクション・見出しに日英両対応）。
+6. 言語別にページを分離する。
+   - 日本語ページ: ルート直下（`usage.md`, `function.md` など）
+   - 英語ページ: `en/` サブディレクトリ（`en/usage.md`, `en/function.md` など）
+   - 各ページのフロントマターには `lang: ja` または `lang: en` を設定する。
+   - 日本語ページには英語ページへのリンク（`[English](en/usage.html)` 等）を末尾に追加する。
+   - 英語ページには日本語ページへのリンク（`[日本語](../usage.html)` 等）を末尾に追加する。
+   - `index.html` は日本語版とし、英語版は `en/index.html` として作成する。
 ### ステップ4: プライバシーポリシー更新
 1. `privacy_policy.html` は Google Play Store 申請を想定した正式文書スタイルで整える。
 2. 次の構成を必ず含める。
@@ -54,7 +61,9 @@ description: My Jigsaw Puzzle の GitHub Pages 紹介サイトを更新し、公
 2. 変更をコミットし、リモートへ push する。
 3. GitHub Pages のビルド状態を確認し、`built` を確認する。
 ## ルール
-- 記述は日本語と英語の両方で行う（同一ページ内に日英両言語を記載する）。
+- 日本語ページと英語ページはファイルを分けて管理する（同一ファイルに混在させない）。
+  - 日本語: ルート直下
+  - 英語: `en/` サブディレクトリ
 - 公開情報に不要な内部情報を記載しない。
 - 本体側リポジトリを示す URL・名称・参照表現を追加しない。
 - **ゲームを遊ぶ人の視点**で書く。開発者やアプリ運営者が意識する言葉（SQLite、assets、API、リファクタリング等）は使わない。
