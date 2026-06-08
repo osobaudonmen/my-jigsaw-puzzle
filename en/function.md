@@ -19,6 +19,7 @@ Create and manage puzzles using photos saved on your device.
 Move pieces with intuitive touch gestures to complete the puzzle.
 
 - Drag pieces to move them
+- Tap pieces to rotate them
 - Pinch to zoom in or out (the content between your fingers stays on screen)
 - Two-finger drag to pan the view
 - Show or hide the settings panel

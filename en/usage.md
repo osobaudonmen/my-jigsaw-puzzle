@@ -13,6 +13,7 @@ lang: en
 ## Controls
 
 - **Drag**: Move a piece
+- **Tap**: Rotate a piece
 - **Pinch**: Zoom in or out (the content between your fingers stays on screen)
 - **Two-finger drag**: Pan the view
 - **Settings panel**: Change piece count, background color, or reset the game

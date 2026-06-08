@@ -6,6 +6,14 @@ lang: en
 
 ## Changelog
 
+### 0.27
+
+- Significantly improved rendering performance and stability when grabbing, moving, or rotating pieces.
+- Improved piece rotation: shadows now fall consistently to the bottom-right regardless of the piece's angle. Also fixed a bug where pieces or shadows would shift or warp when completing a rotation or starting a drag.
+- Smoother feel when snapping pieces: eliminated the brief freeze that occurred upon snapping. Also prevented pieces from briefly disappearing or flickering while the background loads.
+- Re-loading the game now preserves and restores the exact overlapping order (Z-order) of the pieces.
+- Redesigned the background color selection panel (color picker) with a cleaner layout to make choosing colors more intuitive.
+
 ### 0.26
 
 - Panning the play area now uses a two-finger drag gesture. You can now move the view even when the screen is covered with pieces.
